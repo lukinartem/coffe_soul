@@ -167,6 +167,9 @@
     .button {
         padding: 16px 32px;
     }
+    .login_btn {
+        padding: 5px 15px;
+    }
     .main_btn {
         margin-bottom: 90px;
     }
@@ -403,6 +406,9 @@
     .main_container {
         padding: 0 17px;
     }
+    .cofee_to_go__title {
+        margin-right: 10px;
+    }
 
 
 }
@@ -439,6 +445,9 @@
     }
     .button {
         padding: 17px 44px;
+    }
+    .login_btn {
+        padding: 5px 15px;
     }
     .header {
         height: 85px;
@@ -516,6 +525,9 @@
     .button {
         font-size: 16px;
         padding: 14px 42px;
+    }
+    .login_btn {
+        padding: 5px 15px;
     }
     .main_btn {
         margin-bottom: 45px;
@@ -796,9 +808,6 @@
 
     /* index 2 */
 
-    .section_cofee_to_go_title {
-        margin-bottom: 60px;
-    }
 }
 
 

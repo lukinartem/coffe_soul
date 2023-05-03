@@ -20,8 +20,6 @@ document.addEventListener('DOMContentLoaded', ()=> {
     }
 
     
-
-    
         const el_content_wrapper = document.querySelector('.content_wrapper');
         window.addEventListener('click', function (event) {
             // product_count
@@ -173,8 +171,13 @@ document.addEventListener('DOMContentLoaded', ()=> {
                     }
                 }
                 el_basket_icon__value.innerText = tottleCount;
-
             }
+
+
+            
+
+            
+            
             // function priceSumCard () {
             //     const els_basket__card__content = document.querySelectorAll('.basket__card__content');
             //     let rottlePriceCard = 0;

@@ -1,0 +1,34 @@
+[
+	{
+		"id": 1,
+		"title": "Bruno Brazilia",
+		"text": "С нотками карамели, сливок, какао, темного шоколада и ванили",
+		"weight": 200,
+		"price": 300,
+		"imgSrc": "./img/index2/card/Vectary_texture.webp"
+	},
+    {
+		"id": 2,
+		"title": "Cofféa arábica",
+		"text": "С нотками карамели, сливок, какао, темного шоколада и ванили",
+		"weight": 200,
+		"price": 350,
+		"imgSrc": "./img/index2/card/Vectary_texture.webp"
+	},
+    {
+		"id": 3,
+		"title": "Coffea canephora",
+		"text": "С нотками карамели, сливок, какао, темного шоколада и ванили",
+		"weight": 200,
+		"price": 400,
+		"imgSrc": "./img/index2/card/Vectary_texture.webp"
+	},
+    {
+		"id": 4,
+		"title": "Coffea liberica",
+		"text": "С нотками карамели, сливок, какао, темного шоколада и ванили",
+		"weight": 200,
+		"price": 450,
+		"imgSrc": "./img/index2/card/Vectary_texture.webp"
+	}
+]
