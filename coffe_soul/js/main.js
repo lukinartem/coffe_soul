@@ -1,4 +1,12 @@
+
 document.addEventListener('DOMContentLoaded', ()=> {
+    if (window.jQuery) {
+        console.log('jQuery подключен к странице') 
+      } else {
+        console.log('jQuery не подключен к странице') 
+      }
+      
+
     
     // open_nav
 
@@ -8,6 +16,14 @@ document.addEventListener('DOMContentLoaded', ()=> {
             document.body.classList.toggle('open_nav')
         })
     }
+    // open_login-list
+
+    // const el_login_active = document.querySelector('.login');
+    // if (el_login_active) {
+    //     el_login_active.addEventListener('click',()=> {
+    //         document.body.classList.toggle('open_list');
+    //     });
+    // }
 
     // index2
 
@@ -22,6 +38,14 @@ document.addEventListener('DOMContentLoaded', ()=> {
     
         const el_content_wrapper = document.querySelector('.content_wrapper');
         window.addEventListener('click', function (event) {
+
+            // open_login-list
+            if (event.target.id === 'login-active'){
+                document.body.classList.toggle('open_list');
+            }else {
+                document.body.classList.remove('open_list');
+            }
+
             // product_count
             let el_product_count;
             let el_product_count__value;
@@ -55,8 +79,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
             if (event.target.hasAttribute('data-action') && event.target.closest('.content_wrapper')) {
                 priceSum ();
-                countSum ();
-                
+                countSum ();   
             }
             
 
@@ -125,6 +148,45 @@ document.addEventListener('DOMContentLoaded', ()=> {
             countSum ();
     
             
+            }
+
+            if (event.target.hasAttribute('data-order')) {
+                let orderInfo = [];
+                const els_content_wrapper = document.querySelectorAll('.basket__card__content');
+                const el_price_number = this.document.querySelector('.price-number')
+                // создаем новый объект `Date`
+                let today = new Date();
+                // получаем дату и время
+                let nowDate = today.toLocaleString();
+                console.log(nowDate);
+                if (els_content_wrapper) {
+                    for (let i = 0; i < els_content_wrapper.length; i++) {
+                        orderInfo.push(
+                            {
+                                id: els_content_wrapper[i].dataset.id,
+                                title: els_content_wrapper[i].querySelector('.basket__card__content__title').innerText,
+                                weight: els_content_wrapper[i].querySelector('.basket__card__content__weight').innerText,
+                                price: els_content_wrapper[i].querySelector('.basket__card__content__price').innerText,
+                                counter: els_content_wrapper[i].querySelector('[data-counter]').innerText,
+                                date: nowDate
+                            }
+                        )
+                    }    
+                }
+                orderInfo.push({sumPrice: el_price_number.innerText,
+                                date: nowDate});
+                                
+                let orderInfoJson = JSON.stringify(orderInfo);
+
+                $.ajax({
+                    type: "POST",
+                    url: "./php/order.php",
+                    dataType: 'json',
+                    data:  {arr: orderInfoJson},
+                    success: function() {
+                    }
+                })
+
             }
             // функция удаление записи "корзина пуста"
             function toggleStatus() {

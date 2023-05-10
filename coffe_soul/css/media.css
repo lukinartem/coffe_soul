@@ -362,12 +362,12 @@
     /* section_contacts */
 
     .section_contacts__box {
-        width: 628px;
-        height: 453px;
+        max-width: 628px;
+        max-height: 453px;
     }
     .section_contacts__box__text_contriner {
-        width: 431px;
-        height: 273px;
+        max-width: 431px;
+        max-height: 273px;
     }
     .section_contacts__title {
         padding-top: 30px;
@@ -400,9 +400,9 @@
     .row {
         gap: 10px;
     }
-    .section_cofee_to_go_title {
+    /* .section_cofee_to_go_title {
         height: 100%
-    }
+    } */
     .main_container {
         padding: 0 17px;
     }
@@ -762,13 +762,13 @@
         left: calc((100% - 100vw) / 2);
     }
     .section_contacts__box {
-        width: 320px;
-        height: 328px;
+        max-width: 320px;
+        max-height: 328px;
     }
 
     .section_contacts__box__text_contriner {
-        width: 288px;
-        height: 172px;
+        max-width: 288px;
+        max-height: 172px;
     }
     .section_contacts__title {
         padding-top: 28px;
